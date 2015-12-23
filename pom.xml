@@ -204,6 +204,11 @@
             <goals>
               <goal>sign</goal>
             </goals>
+            <configuration>
+              <executable>/usr/bin/gpg2</executable>
+              <useAgent>true</useAgent>
+              <keyname>AD6F7730</keyname>
+            </configuration>
           </execution>
         </executions>
       </plugin>
