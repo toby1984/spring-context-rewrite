@@ -1,6 +1,6 @@
 ## What's this ? 
 
-When writing integration tests for XML-based Spring applications , one has often to repeat quite a lot of XML to properly setup a test ApplicationContext. 
+When writing integration tests for XML-based Spring applications , one often has to repeat quite a lot of XML to properly setup a test ApplicationContext. 
 
 This tiny project implements a custom TestContextBootstrapper that allows you to rewrite your 'real' ApplicationContext XML on-the-fly so that it can be used in integration tests.
 
@@ -25,17 +25,18 @@ This project provides a custom TestContextBootstrapper along with some new annot
 
 ## Usage
 
-Instead of just annotating your integration test class with just @ContextConfiguration , you now also need to use @BootstrapWith to tell Spring which bootstrapper to use. You may want to replace @ContextConfiguration with @ContextRewritingBootStrapper.ContextConfiguration so that you can enable dumping the rewritten ApplicationContext to stdout (useful for debugging).
+Instead of just annotating your integration test class with just @ContextConfiguration , you now also need to use @BootstrapWith to tell Spring which bootstrapper to use. 
+You may want to replace @ContextConfiguration with @ContextRewritingBootStrapper.ContextConfiguration so that you can enable dumping the rewritten ApplicationContext to stdout (useful for debugging).
 
 To rewrite the ApplicationContext XML, you may use any number of the following annotations (note that only JDK >=1.8 allows repeating annotations):
 
-| Annotation    | Attributes |
-| ------------- | ------------- |
-| @ReplaceRule  | xpath , replacement |
-| @RemoveRule   | xpath |
-| @InsertRule   | xpath , insert  |
+| Annotation    | Attributesi                                | Remarks     |
+| ------------- | ------------------------------------------ | ----------- |
+| @ReplaceRule  | xpath , replacement , replacementClassName | You may use either *replacement* **or** *replacementClassName* but not both. |
+| @RemoveRule   | xpath                                      |             |
+| @InsertRule   | xpath , insert                             |             |
 
-Example:
+### Usage Example
 
 ```java
 @BootstrapWith(value=ContextRewritingBootStrapper.class)

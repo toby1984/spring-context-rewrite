@@ -35,6 +35,26 @@
       <version>3.4</version>
     </dependency>
   </dependencies>
+  <developers>
+    <developer>
+      <id>tgierke</id>
+      <name>Tobias Gierke</name>
+      <email>tobias.gierke@code-sourcery.de</email>
+      <url>https://github.com/toby1984/spring-context-rewrite</url>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Berlin</timezone>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
   <build>
     <resources>
       <resource>

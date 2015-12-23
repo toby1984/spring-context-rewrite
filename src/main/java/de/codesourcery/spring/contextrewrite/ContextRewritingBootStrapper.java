@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.voipfuture.cloudportal.test;
+package de.codesourcery.spring.contextrewrite;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
