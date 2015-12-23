@@ -9,7 +9,7 @@
   <url>https://github.com/toby1984/spring-context-rewrite</url>
   <scm>
     <connection>scm:git:https://github.com/toby1984/spring-context-rewrite.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:toby1984/spring-context-rewrite.git</developerConnection>
+    <developerConnection>scm:git:ssh://git@github.com/toby1984/spring-context-rewrite.git</developerConnection>
     <url>https://github.com/toby1984/spring-context-rewrite</url>
   </scm>
   <properties>
