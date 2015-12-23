@@ -154,12 +154,14 @@
         <groupId>com.mycila.maven-license-plugin</groupId>
         <artifactId>maven-license-plugin</artifactId>
         <configuration>
+          <strictCheck>true</strictCheck>
           <header>${basedir}/etc/license_header.txt</header>
           <quiet>false</quiet>
           <failIfMissing>true</failIfMissing>
           <basedir>${basedir}/src</basedir>
           <excludes>
             <exclude>**/log4j.properties</exclude>
+            <exclude>**/*.xml</exclude>
           </excludes>
         </configuration>
         <executions>
