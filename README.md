@@ -30,13 +30,13 @@ Instead of just annotating your integration test class with @ContextConfiguratio
 
 To rewrite the ApplicationContext XML, you may use any number of the following annotations (note that only JDK >=1.8 allows repeating annotations):
 
-| Annotation              | Attributesi                                    | Remarks                                                                                                              |
-| ----------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------.------------- |
-| @ContextConfiguration   | value , debug , dumpRewrittenXML | 'value' holds the spring context path. 'debug' is optional and turns on debug output to stdout. 'dumpRewrittenXML' does just that. | 
-| @ReplaceRule            | id, xpath , replacement , replacementClassName | 'id' attribute is optional. You may use either *replacement* **or** *replacementClassName* but not both.             |
-| @RemoveRule             | id , xpath                                     | 'id' attribute is optional.                                                                                          |
-| @InsertElementRule      | id , xpath , insert                            | 'id' attribute is optional.                                                                                          |
-| @InsertAttributeRule    | id, xpath , name , value                       | 'id' attribute is optional.                                                                                          |
+| Annotation              | Attributes                                     | Remarks                                                                                                                            |
+| ----------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| @ContextConfiguration   | value , debug , dumpRewrittenXML               | 'value' holds the spring context path. 'debug' is optional and turns on debug output to stdout. 'dumpRewrittenXML' does just that. | 
+| @ReplaceRule            | id, xpath , replacement , replacementClassName | 'id' attribute is optional. You may use either *replacement* **or** *replacementClassName* but not both.                           |
+| @RemoveRule             | id , xpath                                     | 'id' attribute is optional.                                                                                                        |
+| @InsertElementRule      | id , xpath , insert                            | 'id' attribute is optional.                                                                                                        |
+| @InsertAttributeRule    | id, xpath , name , value                       | 'id' attribute is optional.                                                                                                        |
 
 Annotations are parsed from all classes within a hierarchy so it's possible to have an abstract base class that performs some general transformations and then have more specific rules for individual tests.
 
