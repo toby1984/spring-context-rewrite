@@ -44,23 +44,21 @@ import org.xml.sax.InputSource;
 /**
  * Spring {@link TestContextBootstrapper} that provides annotation support for rewriting the Spring XML using XPath expressions.
  *
- * <p>Example Usage:
- * <pre>
- * <code>
- * {@literal @}BootstrapWith(value=ContextRewritingBootStrapper.class)
- * {@literal @}ContextRewritingBootStrapper.ContextConfiguration(value="/spring-auth-test.xml",dumpRewrittenXML=true)
- * {@literal @}ReplaceRule( xpath="/beans/bean[@id='settingsResource']/constructor-arg/@value" , replacement ="/some.properties" )
- * {@literal @}RemoveRule( xpath="/beans/bean[@id='settingsResource']/constructor-arg" )
- * {@literal @}InsertRule( xpath="/beans/bean[@id='settingsResource']" , insert ="<constructor-arg value=\"other.properties\"/>" )
- * public class SpringIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests
- * {
- *     {@literal @}Test
- *     public void testDoNothing() {
- *     }
- * }</code>
- * </pre>
+ * Example Usage:
+ * {@code
+ {@literal @}BootstrapWith(value=ContextRewritingBootStrapper.class)
+ {@literal @}ContextRewritingBootStrapper.ContextConfiguration(value="/spring-auth-test.xml",dumpRewrittenXML=true)
+ {@literal @}ReplaceRule( xpath="/beans/bean[{@literal @}id='settingsResource']/constructor-arg/{@literal @}value" , replacement ="/some.properties" )
+ {@literal @}RemoveRule( xpath="/beans/bean[{@literal @}id='settingsResource']/constructor-arg" )
+ {@literal @}InsertRule( xpath="/beans/bean[{@literal @}id='settingsResource']" , insert ="<constructor-arg value="other.properties" )
+ public class SpringIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests
+ {
+     {@literal @}Test
+     public void testDoNothing() {
+     }
+ }
+ * }
  * Note that rules get executed in order they are listed.
- * </p>
  * 
  * @author tobias.gierke@code-sourcery.de
  */
