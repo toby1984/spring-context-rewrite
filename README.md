@@ -15,12 +15,12 @@ This project provides a custom TestContextBootstrapper along with some new annot
 ## Requirements (Building)
 
 - Maven 3.x
-- Spring 4.2.x (may work with earlier versions, not tested)
+- Spring 4.1.x (may work with earlier versions, not tested)
 - JDK >= 1.8 
 
 ## Requirements (Running)
 
-- Spring 4.2.x (may work with earlier versions, not tested)
+- Spring 4.1.x (may work with earlier versions, not tested)
 - JDK >= 1.8 
 
 ## Usage
