@@ -10,7 +10,7 @@
   <scm>
     <connection>scm:git:https://github.com/toby1984/spring-context-rewrite.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/toby1984/spring-context-rewrite.git</developerConnection>
-    <url>https://github.com/toby1984/spring-context-rewrite</url>
+    <url>git@github.com/toby1984/spring-context-rewrite.git</url>
   </scm>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
