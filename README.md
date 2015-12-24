@@ -50,7 +50,7 @@ The 'id' attribute on rewrite annotations is optional and used to override a rul
 @ReplaceRule( xpath="/beans/bean[@id='settingsResource']/constructor-arg/@value" , replacement ="/some.properties" )
 @RemoveRule( xpath="/beans/bean[@id='dataSource']" )
 @RemoveRule( xpath="/beans/bean[@id='config']" )
-@InsertRule( xpath="/beans/bean[@id='settingsResource']" , insert ="<constructor-arg value=\"other.properties\"/>" )
+@InsertElementRule( xpath="/beans/bean[@id='settingsResource']" , insert ="<constructor-arg value=\"other.properties\"/>" )
 public class SpringIntegrationTest extends AbstractTransactionalJUnit4SpringContextTests
 {
     @Test
@@ -72,7 +72,7 @@ public abstract class AbstractSpringIntegrationTest extends AbstractTransactiona
 
 @ReplaceRule( id="configRule" , xpath="/beans/bean[@id='settingsResource']/constructor-arg/@value" , replacement ="/other.properties" )
 @RemoveRule( xpath="/beans/bean[@id='config']" )
-@InsertRule( xpath="/beans/bean[@id='settingsResource']" , insert ="<constructor-arg value=\"other.properties\"/>" )
+@InsertElementRule( xpath="/beans/bean[@id='settingsResource']" , insert ="<constructor-arg value=\"other.properties\"/>" )
 public abstract class SpringIntegrationTest extends AbstractSpringIntegrationTest {
 {   
 }
